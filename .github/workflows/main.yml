@@ -20,6 +20,9 @@ jobs:
           fetch-depth: 0
           lfs: true
           
+      - name: Pull latest changes
+        run: git pull https://reichaves:$HF_TOKEN@huggingface.co/spaces/reichaves/Chatbot-Gemma2-9b-It-all-MiniLM-L6-v2-Brazil-PDF main
+
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
