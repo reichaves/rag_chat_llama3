@@ -128,11 +128,11 @@ if groq_api_key and huggingface_api_token:
         history_aware_retriever = create_history_aware_retriever(llm, retriever, contextualize_q_prompt)
 
         system_prompt = (
-            "Você é um assistente para tarefas de resposta a perguntas. Responda em Português do Brasil a menos que seja pedido outro idioma"
+            "Você é um assistente para tarefas de resposta a perguntas. Sempre coloque no final das respostas: 'Todas as informações devem ser checadas com a(s) fonte(s) original(ais). Responda em Português do Brasil a menos que seja pedido outro idioma"
             "Use os seguintes pedaços de contexto recuperado para responder "
             "à pergunta. Se você não sabe a resposta, diga que "
             "não sabe. Use no máximo três frases e mantenha a "
-            "resposta concisa. Sempre coloque no final das respostas: 'Todas as informações devem ser checadas com a(s) fonte(s) original(ais).'"
+            "resposta concisa."
             "\n\n"
             "{context}"
         )
