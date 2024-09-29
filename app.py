@@ -65,7 +65,7 @@ Este projeto não se responsabiliza pelos conteúdos criados a partir deste site
 
 **Sobre este app**
 
-Este aplicativo foi desenvolvido por Reinaldo Chaves. Para mais informações, contribuições e feedback, visite o [repositório do projeto no GitHub](https://https://github.com/reichaves/rag_chat_gemma2).
+Este aplicativo foi desenvolvido por Reinaldo Chaves. Para mais informações, contribuições e feedback, visite o [repositório do projeto no GitHub](https://github.com/reichaves/rag_chat_gemma2).
 """)
 
 st.title("RAG conversacional com upload em PDF e histórico de bate-papo")
