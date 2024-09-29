@@ -113,11 +113,25 @@ st.markdown("""
         color: #fafafa !important;
         background-color: #262730 !important;
     }
+    /* Estilo para o título principal */
+.yellow-title {
+    color: yellow !important;
+    font-size: 2.5rem !important;
+    font-weight: bold !important;
+}
+
+/* Estilo para o título da sidebar */
+.orange-title {
+    color: orange !important;
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+}
+    
     </style>
     """, unsafe_allow_html=True)
 
 # Sidebar com orientações
-st.sidebar.title("Orientações")
+st.sidebar.markdown("<h2 class='orange-title'>Orientações</h2>", unsafe_allow_html=True)
 st.sidebar.markdown("""
 * Se encontrar erros de processamento, reinicie com F5. Utilize arquivos .PDF com textos não digitalizados como imagens.
 * Para recomeçar uma nova sessão pressione F5.
@@ -138,7 +152,7 @@ Este projeto não se responsabiliza pelos conteúdos criados a partir deste site
 Este aplicativo foi desenvolvido por Reinaldo Chaves. Para mais informações, contribuições e feedback, visite o [repositório do projeto no GitHub](https://github.com/reichaves/rag_chat_gemma2).
 """)
 
-st.title("Chatbot com modelos opensource - entrevista PDFs")
+st.markdown("<h1 class='yellow-title'>Chatbot com modelos opensource - entrevista PDFs ✏️</h1>", unsafe_allow_html=True)
 st.write("Carregue PDFs e converse com o conteúdo deles - aqui é usado o modelo de LLM Gemma2-9b-It e a plataforma de embeddings é all-MiniLM-L6-v2")
 
 # Solicitar as chaves de API
