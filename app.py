@@ -132,7 +132,7 @@ if groq_api_key and huggingface_api_token:
             "Use os seguintes pedaços de contexto recuperado para responder "
             "à pergunta. Se você não sabe a resposta, diga que "
             "não sabe. Use no máximo três frases e mantenha a "
-            "resposta concisa."
+            "resposta concisa. Sempre coloque no final das respostas: 'Todas as informações devem ser checadas com a(s) fonte(s) original(ais).'"
             "\n\n"
             "{context}"
         )
