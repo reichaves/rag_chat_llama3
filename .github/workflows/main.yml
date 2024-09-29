@@ -17,4 +17,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://reichves:$HF_TOKEN@huggingface.co/spaces/reichaves/Chatbot-Gemma2-9b-It-all-MiniLM-L6-v2-Brazil-PDF main
+        run: git push https://reichaves:$HF_TOKEN@huggingface.co/spaces/reichaves/Chatbot-Gemma2-9b-It-all-MiniLM-L6-v2-Brazil-PDF main
