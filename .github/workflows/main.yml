@@ -18,11 +18,24 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
+          git config pull.rebase false
       
-      - name: Pull from hub
+      - name: Fetch from hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git pull https://reichaves:$HF_TOKEN@huggingface.co/spaces/reichaves/Chatbot-Gemma2-9b-It-all-MiniLM-L6-v2-Brazil-PDF main --allow-unrelated-histories
+        run: git fetch https://reichaves:$HF_TOKEN@huggingface.co/spaces/reichaves/Chatbot-Gemma2-9b-It-all-MiniLM-L6-v2-Brazil-PDF main
+
+      - name: Merge changes
+        run: |
+          git merge FETCH_HEAD --allow-unrelated-histories -m "Merge Hugging Face changes"
+        continue-on-error: true
+
+      - name: Check for merge conflicts
+        run: |
+          if git ls-files -u | grep -q '^'; then
+            echo "Merge conflicts detected. Please resolve them manually."
+            exit 1
+          fi
 
       - name: Push to hub
         env:
