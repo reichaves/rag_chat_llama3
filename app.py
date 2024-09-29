@@ -4,7 +4,7 @@
 # usando Streamlit, LangChain, e modelos de linguagem de grande escala - para entrevistar PDFs
 # Geração de respostas usando o modelo Gemma2-9b-It da Groq
 # Embeddings de texto usando o modelo all-MiniLM-L6-v2 do Hugging Face
-##
+#
 
 import streamlit as st
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
