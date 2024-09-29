@@ -21,8 +21,9 @@ from langchain_community.vectorstores import FAISS
 import os
 import tempfile
 
-# Configurar o tema para dark
+# Forçar tema dark
 st.set_page_config(page_title="RAG Q&A Conversacional", layout="wide", initial_sidebar_state="expanded", page_icon="🤖", menu_items=None)
+st.set_theme('dark')
 
 # Aplicar o tema dark
 st.markdown("""
