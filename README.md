@@ -6,7 +6,7 @@ Este projeto implementa um sistema de Recuperação de Informações Aumentada p
 
 Reinaldo Chaves (reichaves@gmail.com)
 
-VERSÃO ON-LINE - VEJA O SITE **[AQUI]([https://chatbotdepdfs.streamlit.app/](https://rag-chat-gemma2.streamlit.app/)**
+VERSÃO ON-LINE - VEJA O SITE **[AQUI]([https://chatbotdepdfs.streamlit.app/](https://rag-chat-gemma2.streamlit.app/))**
 
 ## Características
 
