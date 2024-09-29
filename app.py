@@ -21,68 +21,97 @@ from langchain_community.vectorstores import FAISS
 import os
 import tempfile
 
-# Forçar tema dark
+# Configurar o tema para dark
 st.set_page_config(page_title="RAG Q&A Conversacional", layout="wide", initial_sidebar_state="expanded", page_icon="🤖", menu_items=None)
-st.set_theme('dark')
 
-# Aplicar o tema dark
+# Aplicar o tema dark com CSS
 st.markdown("""
     <style>
     /* Estilo global */
-    .stApp, div[data-testid="stAppViewContainer"] {
+    .stApp, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
         background-color: #0e1117 !important;
         color: #fafafa !important;
     }
     
     /* Sidebar */
-    .stSidebar, div[data-testid="stSidebar"] {
+    [data-testid="stSidebar"], [data-testid="stSidebarNav"] {
         background-color: #262730 !important;
+        color: #fafafa !important;
     }
-    .stSidebar .stMarkdown, div[data-testid="stSidebar"] .stMarkdown {
+    [data-testid="stSidebar"] .stMarkdown, [data-testid="stSidebarNav"] .stMarkdown {
         color: #fafafa !important;
     }
     
     /* Botões */
-    .stButton>button {
+    .stButton > button {
         color: #4F8BF9 !important;
+        background-color: #262730 !important;
         border-radius: 20px !important;
         height: 3em !important;
         width: 200px !important;
     }
     
     /* Inputs de texto */
-    .stTextInput>div>div>input {
-        color: #4F8BF9 !important;
+    .stTextInput > div > div > input {
+        color: #fafafa !important;
         background-color: #262730 !important;
     }
     
     /* Rótulos de input */
-    .stTextInput>label, div[data-baseweb="label"] {
+    .stTextInput > label, [data-baseweb="label"] {
         color: #fafafa !important;
         font-size: 1rem !important;
     }
     
     /* Garantindo visibilidade do texto em todo o app */
-    .stApp > header + div, div[data-testid="stAppViewContainer"] > div {
+    .stApp > header + div, [data-testid="stAppViewContainer"] > div {
         color: #fafafa !important;
     }
     
-    /* Forçando cor de texto para elementos específicos do Hugging Face Spaces */
+    /* Forçando cor de texto para elementos específicos */
     div[class*="css"] {
         color: #fafafa !important;
     }
     
-    /* Ajuste para elementos de entrada no Hugging Face Spaces */
-    div[data-baseweb="base-input"] {
+    /* Ajuste para elementos de entrada */
+    [data-baseweb="base-input"] {
         background-color: #262730 !important;
     }
-    div[data-baseweb="base-input"] input {
+    [data-baseweb="base-input"] input {
         color: #fafafa !important;
     }
     
-    /* Ajuste para o fundo do conteúdo principal no Hugging Face Spaces */
-    div[data-testid="stAppViewContainer"] > section[data-testid="stSidebar"] + div {
+    /* Ajuste para o fundo do conteúdo principal */
+    [data-testid="stAppViewContainer"] > section[data-testid="stSidebar"] + div {
         background-color: #0e1117 !important;
+    }
+
+    /* Forçando cor de fundo escura para todo o corpo da página */
+    body {
+        background-color: #0e1117 !important;
+    }
+
+    /* Ajustando cores para elementos de seleção e opções */
+    .stSelectbox, .stMultiSelect {
+        color: #fafafa !important;
+        background-color: #262730 !important;
+    }
+
+    /* Ajustando cores para expansores */
+    .streamlit-expanderHeader {
+        background-color: #262730 !important;
+        color: #fafafa !important;
+    }
+
+    /* Ajustando cores para caixas de código */
+    .stCodeBlock {
+        background-color: #1e1e1e !important;
+    }
+
+    /* Ajustando cores para tabelas */
+    .stTable {
+        color: #fafafa !important;
+        background-color: #262730 !important;
     }
     </style>
     """, unsafe_allow_html=True)
