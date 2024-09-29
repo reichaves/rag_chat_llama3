@@ -6,6 +6,12 @@
 # Embeddings de texto usando o modelo all-MiniLM-L6-v2 do Hugging Face
 #
 
+import sys
+import platform
+
+__import__('pysqlite3')
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import streamlit as st
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
