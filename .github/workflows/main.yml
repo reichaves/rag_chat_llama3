@@ -20,8 +20,8 @@ jobs:
           fetch-depth: 0
           lfs: true
           
-      - name: Pull latest changes with merge
-        run: git pull --no-rebase https://reichaves:$HF_TOKEN@huggingface.co/spaces/reichaves/Chatbot-Gemma2-9b-It-all-MiniLM-L6-v2-Brazil-PDF main
+      - name: Pull latest changes allowing unrelated histories
+        run: git pull --no-rebase --allow-unrelated-histories https://reichaves:$HF_TOKEN@huggingface.co/spaces/reichaves/Chatbot-Gemma2-9b-It-all-MiniLM-L6-v2-Brazil-PDF main
 
       - name: Push to hub
         env:
