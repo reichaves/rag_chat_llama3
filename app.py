@@ -27,47 +27,67 @@ st.set_page_config(page_title="RAG Q&A Conversacional", layout="wide", initial_s
 # Aplicar o tema dark
 st.markdown("""
     <style>
-    .stApp {
-        background-color: #0e1117;
-        color: #fafafa;
-    }
-    .stSidebar {
-        background-color: #262730;
+    /* Estilo global */
+    .stApp, div[data-testid="stAppViewContainer"] {
+        background-color: #0e1117 !important;
         color: #fafafa !important;
     }
-    .stSidebar .stMarkdown {
+    
+    /* Sidebar */
+    .stSidebar, div[data-testid="stSidebar"] {
+        background-color: #262730 !important;
+    }
+    .stSidebar .stMarkdown, div[data-testid="stSidebar"] .stMarkdown {
         color: #fafafa !important;
     }
+    
+    /* Botões */
     .stButton>button {
-        color: #4F8BF9;
-        border-radius: 20px;
-        height: 3em;
-        width: 200px;
+        color: #4F8BF9 !important;
+        border-radius: 20px !important;
+        height: 3em !important;
+        width: 200px !important;
     }
+    
+    /* Inputs de texto */
     .stTextInput>div>div>input {
-        color: #4F8BF9;
+        color: #4F8BF9 !important;
+        background-color: #262730 !important;
     }
-    /* Melhorando a visibilidade dos rótulos de entrada */
-    .stTextInput>label {
+    
+    /* Rótulos de input */
+    .stTextInput>label, div[data-baseweb="label"] {
         color: #fafafa !important;
         font-size: 1rem !important;
     }
-    /* Ajustando a cor do texto no sidebar para o Hugging Face Spaces */
-    [data-testid="stSidebar"] {
+    
+    /* Garantindo visibilidade do texto em todo o app */
+    .stApp > header + div, div[data-testid="stAppViewContainer"] > div {
         color: #fafafa !important;
     }
-    [data-testid="stSidebar"] .stMarkdown {
+    
+    /* Forçando cor de texto para elementos específicos do Hugging Face Spaces */
+    div[class*="css"] {
         color: #fafafa !important;
     }
-    /* Garantindo que o texto no corpo principal seja visível */
-    .stApp > header + div {
+    
+    /* Ajuste para elementos de entrada no Hugging Face Spaces */
+    div[data-baseweb="base-input"] {
+        background-color: #262730 !important;
+    }
+    div[data-baseweb="base-input"] input {
         color: #fafafa !important;
+    }
+    
+    /* Ajuste para o fundo do conteúdo principal no Hugging Face Spaces */
+    div[data-testid="stAppViewContainer"] > section[data-testid="stSidebar"] + div {
+        background-color: #0e1117 !important;
     }
     </style>
     """, unsafe_allow_html=True)
 
 # Sidebar com orientações
-st.sidebar.title("Menu")
+st.sidebar.title("Orientações")
 st.sidebar.markdown("""
 * Se encontrar erros de processamento, reinicie com F5. Utilize arquivos .PDF com textos não digitalizados como imagens.
 * Para recomeçar uma nova sessão pressione F5.
@@ -88,7 +108,7 @@ Este projeto não se responsabiliza pelos conteúdos criados a partir deste site
 Este aplicativo foi desenvolvido por Reinaldo Chaves. Para mais informações, contribuições e feedback, visite o [repositório do projeto no GitHub](https://github.com/reichaves/rag_chat_gemma2).
 """)
 
-st.title("RAG conversacional com upload em PDF e histórico de bate-papo")
+st.title("Chatbot com modelos opensource - entrevista PDFs")
 st.write("Carregue PDFs e converse com o conteúdo deles - aqui é usado o modelo de LLM Gemma2-9b-It e a plataforma de embeddings é all-MiniLM-L6-v2")
 
 # Solicitar as chaves de API
