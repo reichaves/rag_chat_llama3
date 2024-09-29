@@ -33,6 +33,10 @@ st.markdown("""
     }
     .stSidebar {
         background-color: #262730;
+        color: #fafafa !important;
+    }
+    .stSidebar .stMarkdown {
+        color: #fafafa !important;
     }
     .stButton>button {
         color: #4F8BF9;
@@ -42,6 +46,22 @@ st.markdown("""
     }
     .stTextInput>div>div>input {
         color: #4F8BF9;
+    }
+    /* Melhorando a visibilidade dos rótulos de entrada */
+    .stTextInput>label {
+        color: #fafafa !important;
+        font-size: 1rem !important;
+    }
+    /* Ajustando a cor do texto no sidebar para o Hugging Face Spaces */
+    [data-testid="stSidebar"] {
+        color: #fafafa !important;
+    }
+    [data-testid="stSidebar"] .stMarkdown {
+        color: #fafafa !important;
+    }
+    /* Garantindo que o texto no corpo principal seja visível */
+    .stApp > header + div {
+        color: #fafafa !important;
     }
     </style>
     """, unsafe_allow_html=True)
