@@ -41,7 +41,23 @@ st.markdown("""
 # Sidebar com orientações
 st.sidebar.title("Menu")
 st.sidebar.markdown("""
-# ... [O conteúdo do sidebar permanece o mesmo] ...
+* Se encontrar erros de processamento, reinicie com F5. Utilize arquivos .PDF com textos não digitalizados como imagens.
+* Para recomeçar uma nova sessão pressione F5.
+
+**Atenção:** Os documentos que você compartilhar com o modelo de IA generativa podem ser usados pelo Gemini para treinar o sistema. Portanto, evite compartilhar documentos PDF que contenham:
+1. Dados bancários e financeiros
+2. Dados de sua própria empresa
+3. Informações pessoais
+4. Informações de propriedade intelectual
+5. Conteúdos autorais
+
+E não use IA para escrever um texto inteiro! O auxílio é melhor para gerar resumos, filtrar informações ou auxiliar a entender contextos - que depois devem ser checados. Inteligência Artificial comete erros (alucinações, viés, baixa qualidade, problemas éticos)!
+
+Este projeto não se responsabiliza pelos conteúdos criados a partir deste site.
+
+**Sobre este app**
+
+Este aplicativo foi desenvolvido por Reinaldo Chaves. Para mais informações, contribuições e feedback, visite o [repositório do projeto no GitHub](https://github.com/seu_usuario/seu_repositorio).
 """)
 
 st.title("RAG conversacional com upload em PDF e histórico de bate-papo")
