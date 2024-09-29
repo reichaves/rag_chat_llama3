@@ -1,3 +1,11 @@
+# -*- coding: utf-8
+# Reinaldo Chaves (reichaves@gmail.com)
+# Este projeto implementa um sistema de Recuperação de Informações Aumentada por Geração (RAG) conversacional 
+# usando Streamlit, LangChain, e modelos de linguagem de grande escala - para entrevistar PDFs
+# Geração de respostas usando o modelo Gemma2-9b-It da Groq
+# Embeddings de texto usando o modelo all-MiniLM-L6-v2 do Hugging Face
+#
+
 import streamlit as st
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
@@ -44,7 +52,7 @@ st.sidebar.markdown("""
 * Se encontrar erros de processamento, reinicie com F5. Utilize arquivos .PDF com textos não digitalizados como imagens.
 * Para recomeçar uma nova sessão pressione F5.
 
-**Atenção:** Os documentos que você compartilhar com o modelo de IA generativa podem ser usados pelo Gemini para treinar o sistema. Portanto, evite compartilhar documentos PDF que contenham:
+**Atenção:** Os documentos que você compartilhar com o modelo de IA generativa podem ser usados pelo LLM para treinar o sistema. Portanto, evite compartilhar documentos PDF que contenham:
 1. Dados bancários e financeiros
 2. Dados de sua própria empresa
 3. Informações pessoais
@@ -57,7 +65,7 @@ Este projeto não se responsabiliza pelos conteúdos criados a partir deste site
 
 **Sobre este app**
 
-Este aplicativo foi desenvolvido por Reinaldo Chaves. Para mais informações, contribuições e feedback, visite o [repositório do projeto no GitHub](https://github.com/seu_usuario/seu_repositorio).
+Este aplicativo foi desenvolvido por Reinaldo Chaves. Para mais informações, contribuições e feedback, visite o [repositório do projeto no GitHub](https://https://github.com/reichaves/rag_chat_gemma2).
 """)
 
 st.title("RAG conversacional com upload em PDF e histórico de bate-papo")
