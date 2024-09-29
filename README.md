@@ -1,3 +1,14 @@
+---
+title: RAG Conversacional com Upload de PDF e Histórico de Chat
+emoji: 📚
+colorFrom: indigo
+colorTo: blue
+sdk: streamlit
+sdk_version: 1.28.0
+app_file: app.py
+pinned: false
+---
+
 # RAG Conversacional com Upload de PDF e Histórico de Chat
 
 Este projeto implementa um sistema de Recuperação de Informações Aumentada por Geração (RAG) conversacional usando Streamlit, LangChain, e modelos de linguagem de grande escala. O aplicativo permite que os usuários façam upload de documentos PDF, façam perguntas sobre o conteúdo desses documentos, e mantenham um histórico de chat para contexto em conversas contínuas.
@@ -53,27 +64,18 @@ VERSÃO ON-LINE - VEJA O SITE **[AQUI](https://rag-chat-gemma2.streamlit.app/)**
    ```
 
 2. Abra o navegador e acesse o endereço local mostrado no terminal.
-
 3. Insira suas chaves de API quando solicitado.
-
 4. Faça upload de um ou mais arquivos PDF.
-
 5. Faça perguntas sobre o conteúdo dos documentos na caixa de entrada de texto.
 
 ## Como funciona
 
 1. **Upload de Documentos**: Os usuários fazem upload de arquivos PDF, que são processados e divididos em chunks menores.
-
 2. **Criação de Embeddings**: O texto é convertido em embeddings usando o modelo Hugging Face.
-
 3. **Armazenamento de Vetores**: Os embeddings são armazenados em um banco de dados ChromaDB para recuperação eficiente.
-
 4. **Processamento de Perguntas**: As perguntas dos usuários são contextualizadas com base no histórico do chat.
-
 5. **Recuperação de Informações**: O sistema recupera os chunks de texto mais relevantes com base na pergunta.
-
 6. **Geração de Respostas**: O modelo Gemma2-9b-It da Groq gera uma resposta com base nos chunks recuperados e na pergunta.
-
 7. **Manutenção do Histórico**: O histórico do chat é mantido para fornecer contexto em conversas contínuas.
 
 ## Avisos Importantes
