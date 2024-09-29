@@ -11,13 +11,14 @@ pinned: false
 
 # RAG Conversacional com Upload de PDF e Histórico de Chat
 
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/reichaves/Chatbot-Gemma2-9b-It-all-MiniLM-L6-v2-Brazil-PDF)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://rag-chat-gemma2.streamlit.app/)
+
 Este projeto implementa um sistema de Recuperação de Informações Aumentada por Geração (RAG) conversacional usando Streamlit, LangChain, e modelos de linguagem de grande escala. O aplicativo permite que os usuários façam upload de documentos PDF, façam perguntas sobre o conteúdo desses documentos, e mantenham um histórico de chat para contexto em conversas contínuas.
 
 ## Autor
 
 Reinaldo Chaves (reichaves@gmail.com)
-
-VERSÃO ON-LINE - VEJA O SITE **[AQUI](https://rag-chat-gemma2.streamlit.app/)**
 
 ## Características
 
