@@ -12,7 +12,7 @@ pinned: false
 # Interview PDFs with opensource LLMs - Brazil documents
 
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/reichaves/Chatbot-llama-3.2-90b-text-preview-Brazil-PDF)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://rag-chat-gemma2.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://entrevista-pdf-llama3.streamlit.app/)
 
 Este projeto implementa um sistema de Retrieval-Augmented Generation (RAG) conversacional usando Streamlit, LangChain, e modelos de linguagem de grande escala. O aplicativo permite que os usuários façam upload de documentos PDF, façam perguntas sobre o conteúdo desses documentos, e mantenham um histórico de chat para contexto em conversas contínuas.
 
