@@ -190,7 +190,7 @@ if groq_api_key and huggingface_api_token:
             documents.extend(docs)
             os.unlink(temp_file_path)  # Remove temporary file
 
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=10000, chunk_overlap=1000)
         splits = text_splitter.split_documents(documents)
 
         # Create FAISS vector store
