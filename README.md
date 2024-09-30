@@ -25,7 +25,7 @@ Reinaldo Chaves (reichaves@gmail.com)
 - Interface de usuário Streamlit com tema dark
 - Upload de múltiplos arquivos PDF
 - Processamento de documentos usando LangChain e ChromaDB
-- Geração de respostas usando o modelo Gemma2-9b-It da Groq
+- Geração de respostas usando o modelo llama-3.2-90b-text-preview da Meta
 - Embeddings de texto usando o modelo all-MiniLM-L6-v2 do Hugging Face
 - Histórico de chat para manter o contexto da conversa
 - Barra lateral com orientações importantes para o usuário
@@ -76,7 +76,7 @@ Reinaldo Chaves (reichaves@gmail.com)
 3. **Armazenamento de Vetores**: Os embeddings são armazenados em um banco de dados ChromaDB para recuperação eficiente.
 4. **Processamento de Perguntas**: As perguntas dos usuários são contextualizadas com base no histórico do chat.
 5. **Recuperação de Informações**: O sistema recupera os chunks de texto mais relevantes com base na pergunta.
-6. **Geração de Respostas**: O modelo Gemma2-9b-It da Groq gera uma resposta com base nos chunks recuperados e na pergunta.
+6. **Geração de Respostas**: O modelo llama-3.2-90b-text-preview da Meta gera uma resposta com base nos chunks recuperados e na pergunta.
 7. **Manutenção do Histórico**: O histórico do chat é mantido para fornecer contexto em conversas contínuas.
 
 ## Avisos Importantes
