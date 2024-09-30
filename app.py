@@ -168,7 +168,7 @@ if groq_api_key and huggingface_api_token:
     os.environ["HUGGINGFACEHUB_API_TOKEN"] = huggingface_api_token
 
     # Inicializar o modelo de linguagem e embeddings
-    llm = ChatGroq(groq_api_key=groq_api_key, model_name="Gemma2-9b-It")
+    llm = ChatGroq(groq_api_key=groq_api_key, model_name="Gemma2-9b-It", temperature=0)
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
     session_id = st.text_input("Session ID", value="default_session")
