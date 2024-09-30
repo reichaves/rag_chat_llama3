@@ -136,6 +136,10 @@ st.sidebar.markdown("""
 * Se encontrar erros de processamento, reinicie com F5. Utilize arquivos .PDF com textos não digitalizados como imagens.
 * Para recomeçar uma nova sessão pressione F5.
 
+**Obtenção de chaves de API:**
+* Você pode fazer uma conta no Groq Cloud e obter uma chave de API [aqui](https://console.groq.com/login)
+* Você pode fazer uma conta no Hugging Face e obter o token de API Hugging Face [aqui](https://huggingface.co/docs/hub/security-tokens)
+
 **Atenção:** Os documentos que você compartilhar com o modelo de IA generativa podem ser usados pelo LLM para treinar o sistema. Portanto, evite compartilhar documentos PDF que contenham:
 1. Dados bancários e financeiros
 2. Dados de sua própria empresa
