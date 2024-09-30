@@ -2,7 +2,7 @@
 # Reinaldo Chaves (reichaves@gmail.com)
 # Este projeto implementa um sistema de Recuperação de Informações Aumentada por Geração (RAG) conversacional 
 # usando Streamlit, LangChain, e modelos de linguagem de grande escala - para entrevistar PDFs
-# Geração de respostas usando o modelo Gemma2-9b-It da Groq
+# Geração de respostas usando o modelo llama-3.2-90b-text-preview da Meta
 # Embeddings de texto usando o modelo all-MiniLM-L6-v2 do Hugging Face
 ##
 
@@ -153,11 +153,11 @@ Este projeto não se responsabiliza pelos conteúdos criados a partir deste site
 
 **Sobre este app**
 
-Este aplicativo foi desenvolvido por Reinaldo Chaves. Para mais informações, contribuições e feedback, visite o [repositório do projeto no GitHub](https://github.com/reichaves/rag_chat_gemma2).
+Este aplicativo foi desenvolvido por Reinaldo Chaves. Para mais informações, contribuições e feedback, visite o [repositório do projeto no GitHub](https://github.com/reichaves/rag_chat_llama3).
 """)
 
 st.markdown("<h1 class='yellow-title'>Chatbot com modelos opensource - entrevista PDFs ✏️</h1>", unsafe_allow_html=True)
-st.write("Carregue PDFs e converse com o conteúdo deles - aqui é usado o modelo de LLM Gemma2-9b-It e a plataforma de embeddings é all-MiniLM-L6-v2")
+st.write("Carregue PDFs e converse com o conteúdo deles - aqui é usado o modelo de LLM llama-3.2-90b-text-preview e a plataforma de embeddings é all-MiniLM-L6-v2")
 
 # Solicitar as chaves de API
 groq_api_key = st.text_input("Insira sua chave de API Groq:", type="password")
